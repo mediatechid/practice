@@ -1,23 +1,17 @@
-import React from 'react';
-import SearchExample from '../components/SearchExample';
-import {useNavigate} from "react-router-dom"
 
-function Home (){
+import { useState, useEffect } from "react";
+import { IKImage, IKVideo, IKContext, IKUpload } from 'imagekitio-react';
+import axios from 'axios';
 
-	const navigate = useNavigate();
+export default function Home() {
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  
 
-	return (
-	<div>	
-	<h1>Koding Akademi Home Page</h1>
-	<hr/>
-	<SearchExample/>
-	<hr/>
-	<button 
-		className="bg-blue-500 hover:bg-blue-700 py-2 px-4 rounded"
-		onClick={()=>navigate("/about")}>About</button>
-	</div>
-
-	);
+  return (
+    <div className="App">
+      My Home Page    
+      
+    </div>
+  );
 }
-
-export default Home;

@@ -13,7 +13,7 @@ function About () {
 		<hr/>
 		<button 
 			className="bg-blue-500 hover:bg-blue-700 py-2 px-4 rounded"
-			onClick={()=>navigate(-1)}>Go Back Home</button>
+			onClick={()=>navigate(-1)}>Go Back</button>
 	</div>
 }
 export default About;

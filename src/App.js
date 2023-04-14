@@ -13,20 +13,16 @@ import {
 import JobsLayout from './pages/JobsLayout';
 import Job from './components/Job';
 import NewJob from './components/NewJob';
+import MyRoutes from './routes/MyRoutes';
+import { AuthProvider } from './context/AuthProvider';
 
 //check 1
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/jobs" element={<JobsLayout />} >  
-            <Route path=":id" element={<Job />} />
-            <Route path="new" element={<NewJob />} />
-          </Route>
-      </Routes>
+      <AuthProvider>
+        <MyRoutes/>
+      </AuthProvider>
     </BrowserRouter>
   );
 }
